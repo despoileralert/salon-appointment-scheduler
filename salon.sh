@@ -45,7 +45,7 @@ HAIRCUT() {
   INSERT_APPOINTMENTS=$($PSQL "insert into appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME');")
   echo $INSERT_APPOINTMENTS
 
-  echo "I have put you down for a haircut at $SERVICE_TIME, $(echo $CUSTOMER_NAME | awk '$1=$1')."
+  echo "I have put you down for a haircut at $SERVICE_TIME, $CUSTOMER_NAME."
 }
 
 PERM() {
@@ -69,7 +69,7 @@ PERM() {
   INSERT_APPOINTMENTS=$($PSQL "insert into appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME');")
   echo $INSERT_APPOINTMENTS
 
-  echo "I have put you down for a perm at $SERVICE_TIME, $(echo $CUSTOMER_NAME | awk '$1=$1')."
+  echo "I have put you down for a perm at $SERVICE_TIME, $CUSTOMER_NAME."
 }
 
 CLEAN() {
@@ -93,7 +93,7 @@ CLEAN() {
   INSERT_APPOINTMENTS=$($PSQL "insert into appointments(customer_id, service_id, time) VALUES($CUSTOMER_ID, $SERVICE_ID_SELECTED, '$SERVICE_TIME');")
   echo $INSERT_APPOINTMENTS
 
-  echo "I have put you down for a clean at $SERVICE_TIME, $(echo $CUSTOMER_NAME | awk '$1=$1')."
+  echo "I have put you down for a clean at $SERVICE_TIME, $CUSTOMER_NAME."
 }
 
 MAIN_MENU
